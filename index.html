@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тестовое задание по Frontend разработке</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    thead {
+      overflow: auto;
+    }
+    tbody {
+      max-height: 200px;
+      overflow-x: auto;
+    }
+    thead th {
+      position: sticky;
+      top: 0;
+    }
+    td:nth-child(2),
+    th:nth-child(2),
+    td:last-child,
+    th:last-child {
+      text-align: right;
+      width: 12%;
+    }
+    #dataTable {
+      max-height: 306px;
+      overflow: scroll;
+    }
+    .chart {
+      display: none;
+    }
+    #regionSelect {
+      width: 100%;
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="jumbotron p-3 p-md-5">
+        <h1>Тестовое задание по Frontend разработке</h1>
+
+        <div class="custom-file">
+          <!-- Выбор файла -->
+          <input
+            type="file"
+            class="custom-file-input"
+            id="fileInput"
+            lang="es"
+          />
+          <label class="custom-file-label" for="fileInput">Выбрать файл</label>
+        </div>
+
+        <select id="regionSelect" class="form-select" size="5" multiple>
+          <!-- Выпадающий список с регионами -->
+        </select>
+      </div>
+      <div class="row mb-2">
+        <div class="chart col-md-6 text-white bg-dark">
+          <div id="lineChart" class="box-shadow mx-auto">
+            <!-- Линейный график -->
+          </div>
+        </div>
+        <div id="dataTable" class="col-md-6 bg-light">
+          <!-- Таблица -->
+        </div>
+      </div>
+
+      <!-- Среднее значение -->
+      <div id="averageValues"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
